@@ -1,17 +1,17 @@
 var arr = [30, 10, 45, 100, 80, 7, 9, 108, 785, 500];
-var value = getMaxOrMin(arr,'min');
+var value = getMaxOrMin(arr, 'min');
 console.log(value);
 
-function getMaxOrMin(arr,option) {
+function getMaxOrMin(arr, option) {
     switch(option.toUpperCase()){
         case 'MAX': 
-        value = getMax(arr);
+            value = getMax(arr);
         break;
         case 'MIN':
-        value = getMin(arr);
+            value = getMin(arr);
         break;
         default:
-        value = "Invalid option. Provide 'MIN' or 'MAX'";
+            value = "Invalid option. Provide 'MIN' or 'MAX'";
         break;
     }
     return value;
