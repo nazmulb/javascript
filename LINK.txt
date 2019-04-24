@@ -1,0 +1,4 @@
+https://tutorialspoint.com/javascript/
+https://code.tutsplus.com/tutorials/the-basics-of-object-oriented-javascript--net-7670
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS
+https://leanpub.com/understandinges6/read

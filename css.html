@@ -1,0 +1,46 @@
+<html>
+<head>
+    <style>
+        .center {
+            text-align: center;
+            color: red;
+        }
+
+        .bold {
+            font-weight: bold;
+            color: green;
+        }
+
+        #red {
+            color: red;
+        }
+
+        body + p {
+            text-transform: capitalize;
+        }
+
+        input [type="button"]{
+            color: white;
+            background: black; 
+        }
+
+    </style>
+</head>
+<body>
+    <p class="center bold">
+        This para will be styled by the classes center and bold.
+        <input type="text" name="name" />
+        <input type="button" name="go" value ="Go"/>
+    </p>
+
+    <p class="center bold">
+        This new para.
+    </p>
+
+    <div>
+        <p id="red" class="center bold">
+            This is another para.
+        </p>
+    </div>
+</body>
+</html>    

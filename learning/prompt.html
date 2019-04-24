@@ -1,0 +1,28 @@
+<html>
+   <head>
+      <script type="text/javascript">
+         <!--
+            function getValue(){
+               var retVal = prompt("Enter your name : ", "Nazmul Basher");
+               
+               if(retVal==null || retVal == ""){
+                   alert("You need to give the name");
+                   return;
+               }
+
+               document.write("You have entered : " + retVal);
+            }
+         //-->
+      </script>
+   </head>
+   
+   <body>
+      <p>Click the following button to see the result: </p>
+      
+      <form>
+          <a href="javascript:void(0)" onclick="window.print()">Print</a>
+         <input type="button" value="Enter Name" onclick="getValue();" />
+      </form>
+      
+   </body>
+</html>

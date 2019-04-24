@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event</title>
+        <noscript>
+            <h1>Please Enable JavaScript.</h1>
+        </noscript>
+
+        <script language="javascript" type="text/javascript">
+            <!--
+                function validate(){
+                    var fName = document.getElementById("txtFirstName");
+                    if(fName.value == ""){
+                        alert("Please enter first name.");
+                        fName.focus();
+                        return false;
+                    }
+
+                    return true;
+                } 
+
+
+                function converToLower(){
+                    var fName = document.getElementById("txtFirstName");
+                    var lblFName = document.getElementById("lblFName");
+                    fName.value = fName.value.toLowerCase();
+                    lblFName.innerText = fName.value.toLowerCase();
+                }
+
+                function goToHomePage(){
+                    countDown();
+                    
+
+                    setTimeout(function(){
+                        redirect("index.html");
+                    }, 5000);
+                }
+
+                function countDown(){
+                    var i = 0;
+                    //document.write("You will be redirected to home page in ");
+                    setInterval(function(){
+                        i++;
+                        document.write(i);
+                    },
+                    1000);
+
+                    //document.write(" sec.");
+                }
+
+                function redirect(page){
+                    window.location.href = page;
+                }
+            //-->
+        </script>
+    </head>
+    <body>
+        <form method="POST" onsubmit="return validate()">
+            <input type="text" id="txtFirstName" name="first_name" onkeyup="converToLower()" />
+            <input type="submit" value="Submit" />
+            <input type="button" onclick="goToHomePage()" value="Back" />
+        </form>
+
+        <label id="lblFName"></label> 
+    </body>
+</html>

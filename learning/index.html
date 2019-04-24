@@ -1,0 +1,46 @@
+<html>
+   <body>   
+      <p>TEST</p>
+      <script language="javascript" type="text/javascript">
+         <!--
+
+            var x = 1, y = 3;
+            
+            if(x>1){
+                y = 4;
+            }else {
+                y = 6;
+            }
+
+            y = (typeof x == "number") ? 40 : 60;
+
+            console.log(typeof y);
+
+            var Z = 1;
+            document.write("Hello World!");
+            console.log("Nazmul");
+
+            function sayHello() {
+               alert("Hello World " + Z)
+            }
+
+            function cal()
+            {
+                var x = parseInt(document.getElementById("x").value);
+                var y = parseInt(document.getElementById("y").value);
+                var z = x + y;
+                document.getElementById("z").value = z;
+                console.log(Z+z);
+            }
+
+            console.log(Z);
+         //-->
+      </script> 
+      <input type="text" name="x" id="x" value="2" />
+      <input type="text" name="y" id="y" value="3" />
+      <input type="button" onclick="cal()" value="=" />
+      <input type="text" readonly="true" name="z" id="z" />
+      <input type="button" onclick="alert('Hello Nazmul')" value="Say Nazmul" />
+      <input type="button" onclick="sayHello()" value="Say Hello" />
+   </body>
+</html>
