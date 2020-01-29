@@ -1,4 +1,6 @@
+https://www.w3schools.com/js/default.asp
 https://tutorialspoint.com/javascript/
+https://javascript.info/
 https://code.tutsplus.com/tutorials/the-basics-of-object-oriented-javascript--net-7670
 https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS
 https://leanpub.com/understandinges6/read
@@ -6,3 +8,6 @@ https://leanpub.com/understandinges6/read
 https://www.codementor.io/niladrisekhardutta/how-to-call-apply-and-bind-in-javascript-8i1jca6jp
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
 https://www.freecodecamp.org/news/es5-to-esnext-heres-every-feature-added-to-javascript-since-2015-d0c255e13c6e/
+
+https://dev.to/gafi/7-new-exciting-javascript-features-you-need-to-know-1fkh
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Locale

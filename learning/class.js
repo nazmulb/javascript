@@ -135,7 +135,7 @@ answer(1337); // 56154
 //var vs let
 //Block-Level Declarations
 for (let i = 0; i < 10; i++) { 
-	    console.log(i);
+	console.log(i);
 }
 
 // i is not accessible here
