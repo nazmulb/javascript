@@ -1,4 +1,4 @@
-async function quickstart() {
+async function quickStart() {
   // Imports the Google Cloud client library
   const language = require("@google-cloud/language");
 
@@ -22,11 +22,11 @@ async function quickstart() {
   console.log(`Sentiment magnitude: ${sentiment.magnitude}`);
 }
 
-quickstart();
+//quickStart();
 
-async function quickstartRest() {
+async function quickStartRestText() {
   const axios = require("axios");
-  const API_KEY_GCP = "YOUR_KEY";
+  const API_KEY_GCP = "AIzaSyBxF86gd-Fhs0SFMiLPuuJjVjydvIL2yNA";
   const constType = "PLAIN_TEXT";
   const contentText = `
     Google, headquartered in Mountain View (1600 Amphitheatre Pkwy, Mountain View, CA 940430), 
@@ -66,13 +66,21 @@ async function quickstartRest() {
       entities.forEach((entity) => {
         if (entity.type === "ORGANIZATION") {
           console.log(`Name: ${entity.name}`);
-          console.log(`Score: ${entity.sentiment.score}, Ratio: ${entity.sentiment.score * 100}%`);
+          console.log(
+            `Score: ${entity.sentiment.score}, Ratio: ${
+              entity.sentiment.score * 100
+            }%`
+          );
         }
       });
 
       console.log("Text Classification:");
-      categories.forEach(category => {
-        console.log(`Name: ${category.name}, Confidence: ${category.confidence}, Ratio: ${category.confidence * 100}%`);
+      categories.forEach((category) => {
+        console.log(
+          `Name: ${category.name}, Confidence: ${category.confidence}, Ratio: ${
+            category.confidence * 100
+          }%`
+        );
       });
     })
     .catch(function (error) {
@@ -85,8 +93,81 @@ async function quickstartRest() {
 }
 
 console.log("---------------");
-//quickstartRest();
+//quickStartRestText();
 
+async function quickStartImages() {
+  // Imports the Google Cloud client library
+  const vision = require("@google-cloud/vision");
+
+  // Creates a client
+  const client = new vision.ImageAnnotatorClient();
+
+  // Performs label detection on the image file
+  const [result] = await client.labelDetection(
+    "https://instagram.ftll1-1.fna.fbcdn.net/v/t51.2885-15/e15/95096399_718187358925964_4269722698754055905_n.jpg?_nc_ht=instagram.ftll1-1.fna.fbcdn.net&_nc_cat=1&_nc_ohc=wL7OeXZHnLMAX-b-DpZ&oh=b6df7ee01dbcf390af64505159bf4add&oe=5EA977F1"
+  );
+  const labels = result.labelAnnotations;
+  console.log("Labels:");
+  labels.forEach((label) => console.log(label.description));
+}
+
+//quickStartImages();
+
+async function quickStartRestImage() {
+  const axios = require("axios");
+  const API_KEY_GCP = "AIzaSyBxF86gd-Fhs0SFMiLPuuJjVjydvIL2yNA";
+
+  const requestBdoy = {
+    requests: [
+      {
+        image: {
+          source: {
+            imageUri:
+              "https://instagram.ftll1-1.fna.fbcdn.net/v/t51.2885-15/e15/95096399_718187358925964_4269722698754055905_n.jpg?_nc_ht=instagram.ftll1-1.fna.fbcdn.net&_nc_cat=1&_nc_ohc=wL7OeXZHnLMAX-b-DpZ&oh=b6df7ee01dbcf390af64505159bf4add&oe=5EA977F1",
+          },
+        },
+        features: [
+          {
+            type: "TEXT_DETECTION",
+          },
+        ],
+      },
+      {
+        image: {
+          source: {
+            imageUri:
+              "https://instagram.ftll1-1.fna.fbcdn.net/v/t51.2885-15/e35/95008798_1952679888199593_7408566697593559042_n.jpg?_nc_ht=instagram.ftll1-1.fna.fbcdn.net&_nc_cat=1&_nc_ohc=Fq4xWEEzFTMAX8V12CN&oh=e629a11f58309bcc0ea4b41c85ae6d9f&oe=5EA9E51D",
+          },
+        },
+        features: [
+          {
+            type: "TEXT_DETECTION",
+          },
+        ],
+      },
+    ],
+  };
+
+  axios
+    .post(
+      `https://vision.googleapis.com/v1p4beta1/images:annotate?key=${API_KEY_GCP}`,
+      requestBdoy
+    )
+    .then(function (response) {
+      // handle success
+      console.dir(response.data.responses);
+    })
+    .catch(function (error) {
+      // handle error
+      console.log(error);
+    })
+    .then(function () {
+      // always executed
+    });
+}
+
+console.log("---------------");
+quickStartRestImage();
 
 const rowtext = ` 🌳MR TRREEE! Do you see all of these people using Plastic bags? 🛑Throwing them to the ground as though they will just dissapear?! 😱Frightening indeed my tall green friend. Luckily @veri[34/1813]
 api    | Is fighting back against those nasty plastic abominations and spreading the news with #goodbyebadbag and handing out some of their fancy new #veriff reusable bags. 🛍 My super cool friends from
@@ -131,4 +212,4 @@ cene. 🚀 @lift99co has sent me on a serious mission. 🤔Figure out exactly wh
 ompany, @taxify . The young and insanely inspiring Markus will be speaking to founders only, and only the best, about what it takes to do what he has done. Who and what do I need to see in #budapest🇭🇺  $
  ? #startupstories #founder`;
 
- //console.log(rowtext.replace(/[^\w\s\?\.&\/\\,';"+():*<>$%!=-\[\]@#~`|]/gi, ''));
+//console.log(rowtext.replace(/[^\w\s\?\.&\/\\,';"+():*<>$%!=-\[\]@#~`|]/gi, ''));
