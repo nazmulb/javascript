@@ -26,7 +26,7 @@ async function quickStart() {
 
 async function quickStartRestText() {
   const axios = require("axios");
-  const API_KEY_GCP = "AIzaSyBxF86gd-Fhs0SFMiLPuuJjVjydvIL2yNA";
+  const API_KEY_GCP = "YOUR_KEY";
   const constType = "PLAIN_TEXT";
   const contentText = `
     Google, headquartered in Mountain View (1600 Amphitheatre Pkwy, Mountain View, CA 940430), 
@@ -115,7 +115,7 @@ async function quickStartImages() {
 
 async function quickStartRestImage() {
   const axios = require("axios");
-  const API_KEY_GCP = "AIzaSyBxF86gd-Fhs0SFMiLPuuJjVjydvIL2yNA";
+  const API_KEY_GCP = "YOUR_KEY";
 
   const requestBdoy = {
     requests: [
