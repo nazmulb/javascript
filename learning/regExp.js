@@ -86,9 +86,31 @@ for (const key in textArray) {
   getHashTags(textArray[key]);
 }
 
-console.dir(matches);
+//console.dir(matches);
 const mapSort1 = new Map([...matches.entries()].sort((a, b) => b[1] - a[1]));
-console.dir(mapSort1);
+//console.dir(mapSort1);
 let arrays = Array.from( mapSort1.keys() );
-console.dir(arrays.slice(0, 5));
+//console.dir(arrays.slice(0, 5));
+
+// ["sub", "string"]
+
+let temp = [];
+let i = 0;
+const input = "substring";
+let output = input.split("").map((val, index) => {
+  //console.log(index)
+  if(index == 0) temp[i] = val;
+
+  if(!temp.includes(val)){
+    //temp[i] = temp[i] + val;
+    temp[i] = temp[i] + val;
+    console.log("not=", val)
+  }else {
+    temp[i] = temp[i] + val;
+    //console.log(val)
+  }
+
+  return temp;
+  
+});
 
