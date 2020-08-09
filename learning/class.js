@@ -133,6 +133,9 @@ answer(1337); // 56154
 //ECMAScript6 / ES6:
 
 //var vs let
+
+//var is function scoped and let is block scoped.
+
 //Block-Level Declarations
 for (let i = 0; i < 10; i++) { 
 	console.log(i);
