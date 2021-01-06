@@ -20,6 +20,6 @@
   "dependencies": {
     "@google-cloud/language": "^4.0.0",
     "@google-cloud/vision": "^1.11.0",
-    "axios": "^0.19.2"
+    "axios": "^0.21.1"
   }
 }
